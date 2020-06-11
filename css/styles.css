@@ -1,4 +1,4 @@
-a:nth-child(odd) {
+.list a:nth-child(odd) {
   background: #eee;
 }
 
@@ -24,10 +24,14 @@ a:nth-child(odd) {
   text-decoration: line-through;
 }
 
+.list a.checked1:nth-child(odd) {
+  background: #eee;
+}
+
 .jarBtn {
   margin-bottom: 10px;
 }
 
-.list .selected {
+.list a.selected {
   background-color: MediumSeaGreen;
 }

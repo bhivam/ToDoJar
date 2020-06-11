@@ -4,6 +4,7 @@ $(".list").delegate("a", 'click', function() {
       $(this).removeClass("checked1");
     } else {
       $(this).addClass("checked1");
+      $(this).removeClass("selected");
     }
 });
 
@@ -29,12 +30,19 @@ function addTask() {
 
 // Picks random task from the list
 function pickFromJar() {
-  $(".list").children().removeClass("selected");
   var itemNumber = getRandomInt($(".list").children().length);
-  $(".list a:nth-child(" + itemNumber + ")").addClass("selected");
+  if ($(".list a:nth-child(" + (itemNumber) + ")").hasClass("checked1") ||
+      $(".list a:nth-child(" + (itemNumber) + ")").hasClass("selected")) {
+    pickFromJar();
+  } else {
+    $(".list").children().removeClass("selected");
+    $(".list a:nth-child(" + (itemNumber) + ")").addClass("selected");
+  }
+
+
 }
 
 // This is for selecting a random integer from 1 to another number
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max)) + 1;
+  return Math.floor(Math.random() * Math.floor(max))+1;
 }
