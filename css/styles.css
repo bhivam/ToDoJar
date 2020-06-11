@@ -1,0 +1,33 @@
+a:nth-child(odd) {
+  background: #eee;
+}
+
+.list a {
+  padding-left: 35px;
+  transition: .5s;
+}
+
+.list a.checked1::before {
+  content: '';
+  position: absolute;
+  border-color: solid black;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 15px;
+  left: 15px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.list a.checked1 {
+  text-decoration: line-through;
+}
+
+.jarBtn {
+  margin-bottom: 10px;
+}
+
+.list .selected {
+  background-color: MediumSeaGreen;
+}

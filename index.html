@@ -10,14 +10,16 @@
   <body>
     <div class="jumbotron text-center">
       <h1>To Do Jar</h1>
-      <p>Pick a random item from your jar of tasks.</p>
+      <button onclick="pickFromJar()" type="button" class="jarBtn btn btn-outline-primary">
+        <p>Pick a random item from your jar of tasks.</p>
+      </button>
       <div class="container">
         <div class="row">
             <div class="col-sm-11">
               <input type="text" class="newItem form-control" id="Add Task" placeholder="add task...">
             </div>
             <div class="col-sm-1">
-              <button onclick="addTask()" type="button" class="addBtn btn btn-outline-primary">Add</button>
+              <button onclick="addTask()" type="button" class="addBtn btn btn-outline-secondary">Add</button>
           </div>
         </div>
       </div>
@@ -25,12 +27,32 @@
 
     <div class="container">
       <div class="row">
-        <div class="list-group col-sm-12">
-          <a href="#" class="list-group-item list-group-item-action ">Cras justo odio</a>
-          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-          <a href="#" class="list-group-item list-group-item-action ">Vestibulum at eros</a>
+        <div class="list list-group col-sm-12">
+          <a href="#" class="list-group-item list-group-item-action checked1">Cras justo odio
+            <button type="button" class="close">
+              <span>&#xd7;</span>
+            </button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+            <button type="button" class="close">
+              <span>&#xd7;</span>
+            </button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
+            <button type="button" class="close">
+              <span>&#xd7;</span>
+            </button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac
+            <button type="button" class="close">
+              <span>&#xd7;</span>
+            </button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action ">Vestibulum at eros
+            <button type="button" class="close">
+              <span>&#xd7;</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
