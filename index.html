@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!--
+    The link tags connect this HTML file to style sheets.
+    The meta tags are just giving information about the webpage to the browser
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/styles.css">
@@ -8,8 +12,26 @@
     <title>To Do Jar</title>
   </head>
   <body>
+    <!--
+    The first main component of the page is the Nav tag. This is for putting the
+    navigation bar at the top of the screen. The classes that I put inside of
+    the nav tag are the give information to the bootstrap framework to allow it
+    to put styles on the element.
+    The "navbar-expand-lg" lets the framework know that when the window is
+    larger than 992 pixels wide that it can let the nav bar expand and display
+    all the items on the bar itself
+    The first two elements in the nav bar are the To Do Jar logo and then a
+    navbar drop down menu. This only activates when the bar is bellow 992 pixels
+    wide because of the navbar expand class I mentioned before.
+    The next element is an unodered list which contains the actual content for
+    the navbar. Its given the navbar-nav class so that bootstrap knows that it
+    contains the contents for the navbar. This element is contained within the
+    navbar-collapse div which signifies that everything inside of it should be
+    collapsed should the situation arise where something needs to be collapsed.
+    Within the unordred list are some list item tags which contain links to the
+    other pages in the website.
+    -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
       <a class="navbar-brand" href="#">To Do Jar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,10 +50,25 @@
       </ul>
     </div>
   </nav>
+  <!--
+  Next is the Jumbotron. This is just large ribbon that displays things that I
+  want the user's attention drawn to. Inside here I have the name of the
+  webiste, a button for choosing the random item in the list, and a form which
+  allows you to add items.
+  The button has an event on it which says that when you click the button, it
+  will perform the "pickFromJar()" function which is specified in a linked
+  javascript file.
+  Next we have a container class with a form inside it. The container classs is
+  one of the most basic bootstrap classes. The container classes are divided
+  into 12 columns. Rows go into the container and then content into the rows.
+  The form is a row in this scenario. Then within the row i have a button and a
+  text bar. The text bar is col-sm-10 which means it takes up 10 columns and the
+  button is col-sm-2 which means that it takes up 2 columns for a total of 12.
+  -->
     <div class="jumbotron text-center">
       <h1>To Do Jar</h1>
       <button onclick="pickFromJar()" type="button" class="jarBtn btn btn-outline-primary">
-        <p>Pick a random item from your jar of tasks.</p>
+        Pick a random item from your jar of tasks.
       </button>
       <div class="container">
           <form class="form-inline row mt-4">
@@ -40,6 +77,16 @@
           </form>
       </div>
     </div>
+    <!--
+    Next we have a container with another row within it (this is to split it up
+    from the jumbotron from before). It has a 12 column list in it. Within the
+    list you have a series of <a> tags. Each a tag has text which is that task
+    itself. Then there is a button with a span tag that has a unicode x in it.
+    This is the button which removed the item from the list. The button's event
+    is not set in html, but in javascript.
+    The first <a> tag has a checked1 class which puts a check mark on it and
+    strikes through the text.
+    -->
     <div class="container">
       <div class="row">
         <div class="list list-group col-sm-12">

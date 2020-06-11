@@ -6,7 +6,7 @@ https://bhivam.github.io/ToDoJar/index.html
 This project is not yet completed, there is some implementation that I wanted to add but was not able to yet due to time contraints. This is purely a static website and as such cannot do the folowing:
 - Logging in
 - Signing up
-- Saving your specific list
+- Saving your list from your last visit to the page
 
 ## Technologies used and how they work
 - The website was made with Bootstrap 4, Jquery and HTML
@@ -23,4 +23,9 @@ This project is not yet completed, there is some implementation that I wanted to
 - Deleting tasks from the list.
 - Choosing an item randomly to simulate picking the item from a jar.
 - Crossing items out.
-- The navigation bar adapts to situations when the window is too small to fit all the items in. 
+- The navigation bar adapts to situations when the window is too small to fit all the items in.
+
+## Comments
+- I will mainly be putting comments in ToDoJar/index.html, ToDoJar/css/styles.css, and ToDoJar/js/script.js.
+- There will be comments in other files but they will be more scarce because a lot of the code in some other files is similar to the code in these main three.
+  - The Sign Up page will have no comments because it is extremely similar to the log in page. 

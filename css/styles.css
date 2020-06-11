@@ -1,12 +1,30 @@
+/*
+This changes the color of all the odd items in the list to a gray
+*/
 .list a:nth-child(odd) {
   background: #eee;
 }
 
+
+/*
+This adds space the left of the text in each individual task
+*/
 .list a {
   padding-left: 35px;
   transition: .5s;
 }
 
+/*
+This makes a checkmark icon.
+
+This adds a pseudo element. It then makes sure that the element has not content.
+Then it uses absolute positioning to put the element in a specific spot within
+each task. The border is solid black. Then the border width is 2 pixels only
+on two connecting sides. The top and left just pushes it 15 px from the top
+and left of the starting point. Then the psudoelement is rotated so that the
+border, only defined on two sides, is pointing down. Then the height and width
+of the element is used to create a rectangle.
+*/
 .list a.checked1::before {
   content: '';
   position: absolute;
@@ -20,18 +38,26 @@
   width: 7px;
 }
 
+
+/*
+This puts a line through the text of a task.
+*/
 .list a.checked1 {
   text-decoration: line-through;
 }
 
+
+
+/*
+This is to ensure that checked odd tasks still have their distinguising color
+*/
 .list a.checked1:nth-child(odd) {
   background: #eee;
 }
 
-.jarBtn {
-  margin-bottom: 10px;
-}
-
+/*
+This puts a green background on elements with the selected class.
+*/
 .list a.selected {
   background-color: MediumSeaGreen;
 }
