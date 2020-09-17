@@ -1,2 +1,2 @@
-# Listening Jar
-This Web App will allow the user to put select songs that they want to listen to. They can see the songs that their friends want to listen to as well.
+# Playlist Similarity
+Will measure the similarity between two playlists. It will do this in terms of songs, albums and artists. 
